@@ -8,7 +8,7 @@
 
 ## 📌 Introduction
 
-This project focuses on analyzing the performance of **MPE** (Maximal k-Plex Enumeration) using various methods. The goal is to evaluate and compare algorithms on different datasets.
+This project focuses on analyzing the performance of **MPE** (Maximal k-Plex Enumeration) problem using various methods. The goal is to evaluate and compare algorithms on different datasets.
 
 ---
 
@@ -16,9 +16,9 @@ This project focuses on analyzing the performance of **MPE** (Maximal k-Plex Enu
 
 ### System Requirements
 - Python 3.x
-- Libraries: NumPy, Pandas, Matplotlib
-- Algorithms: PlexEnum, SAPE, D2K, ListPlex, FP, GP, CPlex
-- Dataset: celegansneural, jazz, lastfm_asia_edges, ca-GrQc, wiki-Vote, as-caida20071105, p2p-Gnutella31, email-EuAll, soc-Epinions1, hollywood-2009, com-dblp.ungraph, road-belgium-osm, com-youtube.ungraph, twitter_combined, amazon0505, web-Google, road_usa, soc-LiveJournal1, soc-orkut, facebook_combined, karate_edges
+- **Libraries**: NumPy, Pandas, Matplotlib
+- **Algorithms**: PlexEnum, SAPE, D2K, ListPlex, FP, GP, CPlex
+- **Datasets**: celegansneural, jazz, lastfm_asia_edges, ca-GrQc, wiki-Vote, as-caida20071105, p2p-Gnutella31, email-EuAll, soc-Epinions1, hollywood-2009, com-dblp.ungraph, road-belgium-osm, com-youtube.ungraph, twitter_combined, amazon0505, web-Google, road_usa, soc-LiveJournal1, soc-orkut, facebook_combined, karate_edges
 
 ### Installation Steps
 1. **Clone the repository**:
@@ -26,12 +26,35 @@ This project focuses on analyzing the performance of **MPE** (Maximal k-Plex Enu
    git clone https://github.com/thanhtritrang/Comparative-analysis-of-MPE.git
    cd Comparative-analysis-of-MPE
    ```
-2. **Run the program**:
+2. **Run Algorithm of Enplex**:
    ```bash
-    python main.py --app "algorithms/faplex-enplex/enplex" --time 86400 --data_path "datasets/data-enplex/" --k "2 3 4 5" --q "10 20 30 50 100"
+    python main.py --app "algorithms/faplex/enplex" --time 86400 --data_path "datasets/bin/" --k "2 3 4 5" --q "10 20 30 50 100"
+   ```
+3. **Run Algorithm of SAPE**:
+   ```bash
+    python main.py --app "algorithms/KPLEX-WORK/max_kplex" --time 86400 --data_path "datasets/txt/" --k "2 3 4 5" --q "10 20 30 50 100"
+   ```
+4. **Run Algorithm of FP**:
+   ```bash
+    python main.py --app "algorithms/kplexEnum/kplexes" --time 86400 --data_path "datasets/txt/" --k "2 3 4 5" --q "10 20 30 50 100"
+   ```
+5. **Run Algorithm of ListPlex**:
+   ```bash
+    python main.py --app "algorithms/ListPlex/pro2/listPlex" --time 86400 --data_path "datasets/txt/" --k "2 3 4 5" --q "10 20 30 50 100"
+   ```
+6. **Run Algorithm of PlexEnum**:
+   ```bash
+    python main.py --app "algorithms/Maximal-kPlex/Sequential/PlexEnum" --time 86400 --data_path "datasets/txt/" --k "2 3 4 5" --q "10 20 30 50 100"
+   ```
+7. **Run Algorithm of D2K**:
+   ```bash
+    python main.py --app "algorithms/parallel_enum/text_ui" --time 86400 --data_path "datasets/txt/" --k "2 3 4 5" --q "10 20 30 50 100"
+   ```
+8. **Run Algorithm of GP**:
+   ```bash
+    python main.py --app "algorithms/GP_Kplex/BinaryOptimizeWithPrunNot" --time 86400 --data_path "datasets/txt/" --k "2 3 4 5" --q "10 20 30 50 100"
    ```
 ---
-
 ## 🌟 Key Features
 
 ✅ Performance analysis of MPE on multiple datasets 🔍  
