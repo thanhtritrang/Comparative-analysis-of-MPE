@@ -1,4 +1,4 @@
-# 🚀 Comparative Analysis of Algorithms for Enumerating Maximal k-Plexes over Large Graphs
+# 🚀 Comparative Analysis of Algorithms for Maximal k-Plex Enumeration over Real-world Graphs
 
 📊 **Comparative Analysis of MPE** - A research project on MPE performance evaluation.
 
@@ -8,7 +8,7 @@
 
 ## 📌 Introduction
 
-This project focuses on analyzing the performance of **MPE** (Multi-Processing Environment) using various methods. The goal is to evaluate and compare algorithms on different datasets.
+This project focuses on analyzing the performance of **MPE** (Maximal k-Plex Enumeration) using various methods. The goal is to evaluate and compare algorithms on different datasets.
 
 ---
 
@@ -18,7 +18,7 @@ This project focuses on analyzing the performance of **MPE** (Multi-Processing E
 - Python 3.x
 - Libraries: NumPy, Pandas, Matplotlib
 - Algorithms: PlexEnum, SAPE, D2K, ListPlex, FP, GP, CPlex
-- Dataset: 'celegansneural, jazz, lastfm_asia_edges, ca-GrQc, wiki-Vote, as-caida20071105, p2p-Gnutella31, email-EuAll, soc-Epinions1, hollywood-2009, com-dblp.ungraph, road-belgium-osm, com-youtube.ungraph,twitter_combined, amazon0505, web-Google, road_usa, soc-LiveJournal1, soc-orkut, facebook_combined, karate_edges
+- Dataset: celegansneural, jazz, lastfm_asia_edges, ca-GrQc, wiki-Vote, as-caida20071105, p2p-Gnutella31, email-EuAll, soc-Epinions1, hollywood-2009, com-dblp.ungraph, road-belgium-osm, com-youtube.ungraph, twitter_combined, amazon0505, web-Google, road_usa, soc-LiveJournal1, soc-orkut, facebook_combined, karate_edges
 
 ### Installation Steps
 1. **Clone the repository**:
