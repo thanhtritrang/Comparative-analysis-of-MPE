@@ -2,7 +2,7 @@
 
 📊 **Comparative Analysis of MPE** - A research project on MPE performance evaluation.
 
-![Demo](https://github.com/thanhtritrang/Comparative-analysis-of-MPE/main/images/chart.png)
+![Demo](https://github.com/thanhtritrang/Comparative-analysis-of-MPE/blob/main/images/chart.png)
 
 ---
 
@@ -43,7 +43,7 @@ This project focuses on analyzing the performance of **MPE** (Multi-Processing E
 
 ## 📊 Results Demo
 
-![Demo](https://github.com/thanhtritrang/Comparative-analysis-of-MPE/main/images/result.png)
+![Demo](https://github.com/thanhtritrang/Comparative-analysis-of-MPE/blob/main/images/result.png)
 
 ---
 
