@@ -36,7 +36,7 @@ This project focuses on analyzing the performance of **MPE** (Maximal k-Plex Enu
    ```
 4. **Run Algorithm of FP**:
    ```bash
-    python main.py --app "algorithms/kplexEnum/kplexes" --time 86400 --data_path "datasets/txt/" --k "2 3 4 5" --q "10 20 30 50 100"
+    python main.py --app "algorithms/kplexEnum/kplexes" --time 86400 --data_path "datasets/bin/" --k "2 3 4 5" --q "10 20 30 50 100"
    ```
 5. **Run Algorithm of ListPlex**:
    ```bash
@@ -44,11 +44,11 @@ This project focuses on analyzing the performance of **MPE** (Maximal k-Plex Enu
    ```
 6. **Run Algorithm of PlexEnum**:
    ```bash
-    python main.py --app "algorithms/Maximal-kPlex/Sequential/PlexEnum" --time 86400 --data_path "datasets/txt/" --k "2 3 4 5" --q "10 20 30 50 100"
+    python main.py --app "algorithms/Maximal-kPlex/Sequential/PlexEnum" --time 86400 --data_path "datasets/bin/" --k "2 3 4 5" --q "10 20 30 50 100"
    ```
 7. **Run Algorithm of D2K**:
    ```bash
-    python main.py --app "algorithms/parallel_enum/text_ui" --time 86400 --data_path "datasets/txt/" --k "2 3 4 5" --q "10 20 30 50 100"
+    python main.py --app "algorithms/parallel_enum/text_ui" --time 86400 --data_path "datasets/nde/" --k "2 3 4 5" --q "10 20 30 50 100"
    ```
 8. **Run Algorithm of GP**:
    ```bash
