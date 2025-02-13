@@ -21,11 +21,11 @@ This project focuses on analyzing the performance of **MPE** (Maximal k-Plex Enu
 - **Datasets**: celegansneural, jazz, lastfm_asia_edges, ca-GrQc, wiki-Vote, as-caida20071105, p2p-Gnutella31, email-EuAll, soc-Epinions1, hollywood-2009, com-dblp.ungraph, road-belgium-osm, com-youtube.ungraph, twitter_combined, amazon0505, web-Google, road_usa, soc-LiveJournal1, soc-orkut, facebook_combined, karate_edges
 
 ### Command Explanations:
---app        # Path to the algorithm
---time       # Maximum execution time in seconds
---data_path  # Path to dataset directory
---k          # a positive integer representing the degree to which a k-plex deviates from a clique.
---q          # a positive integer specifying the minimum vertices in a maximal k-plex.
+- --app        # Path to the algorithm
+- --time       # Maximum execution time in seconds
+- --data_path  # Path to dataset directory
+- --k          # a positive integer representing the degree to which a k-plex deviates from a clique.
+- --q          # a positive integer specifying the minimum vertices in a maximal k-plex.
 
 ### Installation Steps
 1. **Clone the repository**:
