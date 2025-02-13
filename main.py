@@ -11,9 +11,10 @@ extension = {
     "BinaryOptimizeWithPrunNot": ".txt",
     "enplex": ".bin",
     "kplexes": ".bin",
-    "listPlex": ".txt",
+    "listPlex": ".bin",
     "PlexEnum": ".bin",
     "max_kplex": ".txt",
+    "sape": ".txt",
     "text_ui": ".nde"
 }
 
@@ -33,13 +34,14 @@ def get_list_files(data_path, endswith=".txt"):
     return files
 
 def runApp(param):
+    print(appName, param)
     name = param.split("/")[-1].replace(extension[appName], "")
     output_file = f"output/{appName}/{appName}_{name}_{param.split('/')[-1]}.txt"
     os.makedirs(f"output/{appName}/", exist_ok=True)
     command = f"{app} {param}" 
 
-    if not is_file_empty(output_file):
-        return
+    # if not is_file_empty(output_file):
+    #     return
 
     with open(output_file, "w") as out:
         try:
@@ -63,15 +65,15 @@ def build_command(appName, file, k, m, maxsecond):
     if appName == "GP":
         return f"{file} output/{appName}/{appName}_{m}_{k} {m} {k}"
     elif appName == "enplex":
-        return f"-k {k} -l {m} -d 1 -t {maxsecond} -f {file}"
+        return f"-f {file} -k {k} -l {m} -d 1 -t {maxsecond}"
     elif appName == "kplexes":
         return f"{file} -k={k} -q={m} -t=1"
     elif appName == "listPlex":
-        return f"{file} {m} {k}"
+        return f"{file} {k} {m}"
     elif appName == "PlexEnum":
         return f"{file} -k {k} -q {m}"
     elif appName == "sape":
-        return f"-k={k} -minsize={m} -verb=0 {file}"
+        return f"{file} -k={k} -minsize={m} -verb=0"
     elif appName == "text_ui":
         return f"{file} -q {m} -k {k}"
     return ""
@@ -88,11 +90,16 @@ if __name__ == "__main__":
 
     appName = os.path.basename(app)
     files = get_list_files(data_path, extension[appName])
-    
-    param_list = [ build_command(appName, f, k, m, maxsecond) for f in files for k in kvalue for m in minsize]
+    param_list = [ build_command(appName, data_path+"/"+f, k, m, maxsecond) for f in files for k in kvalue for m in minsize]
+    # print(param_list, appName)
     
     with multiprocessing.Pool(processes=MAX_PROCESSES) as pool:
         pool.map(runApp, param_list)
 
     print("Complete all processes!")
-    # python script.py --app "algorithms/faplex-enplex/enplex" --time 86400 --data_path "datasets/txt/" --k "2 3 4 5" --q "10 20 30 50 100"
+    # python main.py --app '/home/ttrang/graph/Algos/faplex-master2/enplex' --data_path '/home/ttrang/graph/data-listPlex/' --k '2' --q '10'
+    # python main.py --app '/home/ttrang/graph/Algos/k-plex-master/kplexEnum-main/src/kplexes' --data_path '/home/ttrang/graph/data' --k '2' --q '10'
+    # python main.py --app '/home/ttrang/graph/Algos/k-plex-master/KPLEX-WORK/core/sape' --data_path '/home/ttrang/graph/dataset_sape/' --k '2' --q '10' --max_processes 1
+    # python main.py --app '/home/ttrang/graph/Algos/Maximal-kPlex/Sequential/PlexEnum' --data_path '/home/ttrang/graph/data' --k '2' --q '10' --max_processes 1
+    # python main.py --app '/home/ttrang/graph/Algos/parallel_enum/parallel_enum/build/text_ui' --data_path '/home/ttrang/graph/dataset_textui' --k '2' --q '10' --max_processes 1
+    # python main.py --app '/home/ttrang/graph/Algos/ListPlex-main\ 2/pro2/listPlex' --data_path '/home/ttrang/graph/data-listPlex' --k '2' --q '10' --max_processes 1
