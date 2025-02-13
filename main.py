@@ -8,12 +8,12 @@ from utils.all import is_file_empty, get_list_files
 appName = ""
 app = ""
 extension = {
-    "GP": ".txt",
+    "BinaryOptimizeWithPrunNot": ".txt",
     "enplex": ".bin",
     "kplexes": ".bin",
     "listPlex": ".txt",
     "PlexEnum": ".bin",
-    "sape": ".txt",
+    "max_kplex": ".txt",
     "text_ui": ".nde"
 }
 
