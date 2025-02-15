@@ -3,13 +3,14 @@
 📊 **Comparative Analysis of MPE** - A research project on MPE performance evaluation.
 
 ![Demo](https://github.com/thanhtritrang/Comparative-analysis-of-MPE/blob/main/images/chart.png)
-
+![Demo](https://github.com/thanhtritrang/Comparative-analysis-of-MPE/blob/main/images/all.png)
 ---
 
 ## 📌 Introduction
 
 This project focuses on analyzing the performance of **MPE** (Maximal k-Plex Enumeration) problem using various methods. The goal is to evaluate and compare algorithms on different datasets.
 
+We sincerely thank the authors who have published the source code of the algorithms used in this study. Their contributions have greatly facilitated our research and analysis.
 ---
 
 ## 🔧 Installation
